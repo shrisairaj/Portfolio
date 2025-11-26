@@ -20,7 +20,7 @@ const PROJECTS: Project[] = [
     ],
   },
   {
-    title: "CityBusTracker System",
+    title: "BusTracker System — Smart Tracking System for School buses ",
     tech: ["React.js", "Spring Boot", "WebSocket", "REST APIs", "MySQL"],
     highlights: [
       "Real-time bus tracking with routes, ETA, live location",
@@ -29,7 +29,7 @@ const PROJECTS: Project[] = [
     ],
   },
   {
-    title: "BraveSoft Ecommerce (Collaboration)",
+    title: "Website Builder — Website Generator for end-users (Collaborated project with BraveSoft Advisory Company",
     tech: ["HTML", "CSS", "JS", "PHP", "MySQL"],
     highlights: [
       "Built simplified e-commerce website generator",
@@ -53,7 +53,7 @@ export default function Projects() {
             key={p.title}
             whileHover={{ y: -6 }}
             transition={{ type: "spring", stiffness: 300 }}
-            className="rounded-lg border border-border bg-card p-5 shadow-sm"
+            className="rounded-lg border border-border bg-card p-5 shadow-sm flex flex-col justify-between"
             aria-labelledby={`project-${idx}-title`}
           >
             <div className="flex items-start justify-between gap-4">
@@ -71,10 +71,6 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
-              </div>
-
-              <div className="shrink-0">
-                <div className="h-12 w-12 rounded-md bg-gradient-to-br from-primary to-accent" />
               </div>
             </div>
 

@@ -15,18 +15,13 @@ export default function Hero() {
           className="grid grid-cols-1 gap-8 items-center md:grid-cols-2"
         >
           <div className="flex flex-col items-center text-center md:items-start md:text-left">
-            <div className="mb-4 flex items-center gap-4">
-              <div className="h-20 w-20 shrink-0 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-xl font-semibold text-background">
-                SG
-              </div>
-              <div>
-                <h1 className="text-3xl font-extrabold leading-tight text-foreground dark:text-foreground">
-                  Shrisairaj Gajjam
-                </h1>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  Backend Developer | AI Prompt Engineer | DSA Enthusiast
-                </p>
-              </div>
+            <div className="mb-4 w-full text-center md:text-left">
+              <h1 className="text-3xl font-extrabold leading-tight text-foreground dark:text-foreground">
+                Shrisairaj Gajjam
+              </h1>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Backend Developer | AI Prompt Engineer | DSA Enthusiast
+              </p>
             </div>
 
             <motion.p
@@ -53,9 +48,13 @@ export default function Hero() {
             transition={{ delay: 0.1, duration: 0.6 }}
             className="order-first md:order-last flex items-center justify-center"
           >
-            {/* Placeholder illustration / avatar */}
-              <div className="h-64 w-full max-w-sm rounded-2xl border border-border bg-card p-6">
-              <div className="h-full w-full rounded-xl bg-gradient-to-br from-[#eef2ff] to-[#e6fffa] dark:from-[#0b1226] dark:to-[#021218]" />
+            {/* Photo box: place your photo at `public/images/Photo.jpg` */}
+            <div className="h-64 w-full max-w-sm rounded-2xl border border-border bg-card p-1 overflow-hidden">
+              <img
+                src="/images/Photo.jpg"
+                alt="Shrisairaj Photo"
+                className="h-full w-full object-cover rounded-xl"
+              />
             </div>
           </motion.div>
         </motion.div>
