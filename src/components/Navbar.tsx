@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import { cn } from "../lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
@@ -8,16 +8,17 @@ import { Sun, Moon, Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
   { href: "#skills", label: "Skills" },
+  { href: "#projects", label: "Projects" },
+  { href: "#experience", label: "Experience" },
   { href: "#achievements", label: "Achievements" },
   { href: "#certificates", label: "Certificates" },
-  { href: "#experience", label: "Experience" },
-  { href: "#projects", label: "Projects" },
   { href: "#footer", label: "Contact" },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [theme, setTheme] = useState<"light" | "dark" | "system">("system");
+  const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Initialize theme from localStorage or default to dark
@@ -31,6 +32,34 @@ export default function Navbar() {
       localStorage.setItem("theme", "dark");
     }
   }, []);
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && open) {
+        setOpen(false);
+      }
+    };
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    };
+
+    if (open) {
+      document.addEventListener("keydown", handleKeyDown);
+      document.addEventListener("mousedown", handleClickOutside);
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.body.style.overflow = "unset";
+    };
+  }, [open]);
 
   function getSystemTheme(): "light" | "dark" {
     if (typeof window === "undefined") return "light";
@@ -111,11 +140,12 @@ export default function Navbar() {
             />
 
             <motion.aside
+              ref={menuRef}
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              className="absolute right-0 top-0 h-full w-72 bg-background border-l border-border p-6"
+              className="absolute right-0 top-16 h-[calc(100vh-4rem)] w-72 bg-background border-l border-border p-6 overflow-y-auto"
             >
               <div className="flex items-center justify-between">
                 <div className="text-lg font-semibold">Menu</div>
