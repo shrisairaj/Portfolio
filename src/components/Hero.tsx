@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Github, Linkedin, Code, Target } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -36,6 +37,20 @@ export default function Hero() {
             </motion.p>
 
             <div className="mt-6 flex w-full flex-col gap-3 sm:flex-row sm:items-center md:w-auto">
+              <div className="flex gap-3">
+                <a href="https://leetcode.com/yourusername" target="_blank" rel="noopener noreferrer" className="p-2 rounded-md hover:bg-muted/30 transition">
+                  <Target size={20} />
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="p-2 rounded-md hover:bg-muted/30 transition">
+                  <Linkedin size={20} />
+                </a>
+                <a href="https://codingninjas.com/yourprofile" target="_blank" rel="noopener noreferrer" className="p-2 rounded-md hover:bg-muted/30 transition">
+                  <Code size={20} />
+                </a>
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="p-2 rounded-md hover:bg-muted/30 transition">
+                  <Github size={20} />
+                </a>
+              </div>
               <Link href="#projects" className="inline-flex items-center justify-center rounded-md border border-border bg-transparent px-4 py-2 text-sm font-medium text-foreground hover:bg-muted/30">
                 View Projects
               </Link>

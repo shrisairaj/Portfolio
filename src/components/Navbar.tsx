@@ -9,6 +9,7 @@ import { Sun, Moon, Menu, X } from "lucide-react";
 const NAV_LINKS = [
   { href: "#skills", label: "Skills" },
   { href: "#achievements", label: "Achievements" },
+  { href: "#certificates", label: "Certificates" },
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
   { href: "#contact", label: "Contact" },
@@ -19,14 +20,15 @@ export default function Navbar() {
   const [theme, setTheme] = useState<"light" | "dark" | "system">("system");
 
   useEffect(() => {
-    // Initialize theme from localStorage or system
+    // Initialize theme from localStorage or default to dark
     const saved = localStorage.getItem("theme");
     if (saved === "light" || saved === "dark") {
       setTheme(saved);
       applyTheme(saved);
     } else {
-      setTheme("system");
-      applyTheme(getSystemTheme());
+      setTheme("dark");
+      applyTheme("dark");
+      localStorage.setItem("theme", "dark");
     }
   }, []);
 

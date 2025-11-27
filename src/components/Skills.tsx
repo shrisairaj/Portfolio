@@ -57,30 +57,14 @@ export default function Skills() {
               {category}
             </h3>
 
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-wrap gap-2">
               {skills.map((s) => (
-                <div key={s.name} className="flex flex-col gap-2">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-foreground">{s.name}</span>
-                    {s.level !== undefined && (
-                      <span className="text-xs text-muted-foreground">{s.level}%</span>
-                    )}
-                  </div>
-
-                  {/* progress bar */}
-                  {s.level !== undefined ? (
-                    <div className="h-2 w-full rounded-full bg-muted/20">
-                      <div
-                        className="h-2 rounded-full bg-primary"
-                        style={{ width: `${s.level}%` }}
-                      />
-                    </div>
-                  ) : (
-                    <div className="inline-flex flex-wrap gap-2">
-                      <span className="inline-flex items-center rounded-full bg-muted/30 px-3 py-1 text-xs font-medium text-muted-foreground">{s.name}</span>
-                    </div>
-                  )}
-                </div>
+                <span
+                  key={s.name}
+                  className="inline-flex items-center rounded-full bg-muted/30 px-3 py-1 text-xs font-medium text-muted-foreground"
+                >
+                  {s.name}
+                </span>
               ))}
             </div>
           </motion.div>
