@@ -7,6 +7,7 @@ type Project = {
   title: string;
   tech: string[];
   highlights: string[];
+  link?: string;
 };
 
 const PROJECTS: Project[] = [
@@ -18,6 +19,7 @@ const PROJECTS: Project[] = [
       "Teacher-in-loop multi-set generation",
       "Increased paper-setting workflow efficiency by 80%",
     ],
+    link : "https://github.com/shrisairaj/NextGenPaper",
   },
   {
     title: "BusTracker System — Smart Tracking System for School buses ",
@@ -27,6 +29,7 @@ const PROJECTS: Project[] = [
       "WebSocket low-latency updates",
       "Role-based dashboards (admin, driver, user)",
     ],
+    link : "https://github.com/shrisairaj/CityBusTracking-System",
   },
   {
     title: "Website Builder — Website Generator for end-users (Collaborated project with BraveSoft Advisory Company",
@@ -36,6 +39,7 @@ const PROJECTS: Project[] = [
       "Inventory management + template system",
       "Implemented secure Google login",
     ],
+    link : "https://github.com/shrisairaj/NextGenPaper",
   },
 ];
 
@@ -82,7 +86,7 @@ export default function Projects() {
 
             <div className="mt-5 flex items-center justify-end">
               <a
-                href="https://github.com/Shrisairaj"
+                href={`${p.link}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`View code for ${p.title}`}

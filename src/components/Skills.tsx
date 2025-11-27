@@ -3,34 +3,34 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-type Skill = { name: string; level?: number };
+type Skill = { name: string};
 
 const SKILLS: Record<string, Skill[]> = {
   Programming: [
-    { name: "C", level: 75 },
-    { name: "C++", level: 70 },
-    { name: "Java", level: 75 },
-    { name: "Python", level: 80 },
-    { name: "JavaScript", level: 80 },
-    { name: "PHP", level: 65 },
+    { name: "C"},
+    { name: "C++"},
+    { name: "Java"},
+    { name: "Python"},
+    { name: "JavaScript"},
+    { name: "PHP"},
   ],
   Backend: [
-    { name: "Spring Boot", level: 75 },
-    { name: "Node.js", level: 70 },
-    { name: "Express.js", level: 70 },
+    { name: "Spring Boot"},
+    { name: "Node.js"},
+    { name: "Express.js"},
   ],
   Frontend: [
-    { name: "React.js", level: 80 },
-    { name: "HTML", level: 85 },
-    { name: "CSS", level: 75 },
+    { name: "React.js"},
+    { name: "HTML"},
+    { name: "CSS"},
   ],
   Databases: [
-    { name: "MySQL", level: 80 },
-    { name: "PostgreSQL", level: 65 },
+    { name: "MySQL",},
+    { name: "PostgreSQL"},
   ],
   Tools: [
-    { name: "Git", level: 85 },
-    { name: "GitHub", level: 85 },
+    { name: "Git",},
+    { name: "GitHub"},
   ],
 };
 
@@ -59,15 +59,8 @@ export default function Skills() {
 
             <div className="space-y-3">
               {skills.map((s) => (
-                <div key={s.name} className="flex items-center gap-3">
+                <div key={s.name} className="inline-flex items-center rounded-full bg-muted/30 px-3 py-1 text-xs font-medium text-muted-foreground">
                   <span className="text-sm font-medium text-foreground min-w-0 flex-1">{s.name}</span>
-                  <div className="flex-1 bg-muted/30 rounded-full h-2">
-                    <div
-                      className="bg-primary h-2 rounded-full transition-all duration-300"
-                      style={{ width: `${s.level}%` }}
-                    ></div>
-                  </div>
-                  <span className="text-xs text-muted-foreground w-8 text-right">{s.level}%</span>
                 </div>
               ))}
             </div>

@@ -4,16 +4,15 @@ import Experience from "../components/Experience";
 import Skills from "../components/Skills";
 import Achievements from "../components/Achievements";
 import Certificates from "../components/Certificates";
-import Contact from "../components/Contact";
 
 export default function Home() {
   return (
     <div className="bg-background font-sans">
       <main className="mx-auto w-full">
         <Hero />
+        <Skills />
         <Projects />
         <Experience />
-        <Skills />
         <Achievements />
         <Certificates />
       </main>

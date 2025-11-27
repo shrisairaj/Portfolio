@@ -57,9 +57,9 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="h-16 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <Link href="#home" className="text-lg font-semibold">
+            <a href="#home" className="text-lg font-semibold">
               Shrisairaj
-            </Link>
+            </a>
             <nav className="hidden md:flex items-center gap-4">
               {NAV_LINKS.map((l) => (
                 <a
