@@ -57,14 +57,18 @@ export default function Skills() {
               {category}
             </h3>
 
-            <div className="flex flex-wrap gap-2">
+            <div className="space-y-3">
               {skills.map((s) => (
-                <span
-                  key={s.name}
-                  className="inline-flex items-center rounded-full bg-muted/30 px-3 py-1 text-xs font-medium text-muted-foreground"
-                >
-                  {s.name}
-                </span>
+                <div key={s.name} className="flex items-center gap-3">
+                  <span className="text-sm font-medium text-foreground min-w-0 flex-1">{s.name}</span>
+                  <div className="flex-1 bg-muted/30 rounded-full h-2">
+                    <div
+                      className="bg-primary h-2 rounded-full transition-all duration-300"
+                      style={{ width: `${s.level}%` }}
+                    ></div>
+                  </div>
+                  <span className="text-xs text-muted-foreground w-8 text-right">{s.level}%</span>
+                </div>
               ))}
             </div>
           </motion.div>

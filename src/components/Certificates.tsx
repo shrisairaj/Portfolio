@@ -29,14 +29,7 @@ export default function Certificates() {
             className="rounded-md border border-border bg-card p-4"
           >
             <div>
-              <a
-                href={c.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-medium text-foreground hover:underline"
-              >
-                {c.name}
-              </a>
+              <span className="text-sm font-medium text-foreground">{c.name}</span>
               <p className="mt-1 text-xs text-muted-foreground">Certificate</p>
             </div>
           </motion.article>

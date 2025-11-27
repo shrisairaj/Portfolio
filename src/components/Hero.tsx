@@ -40,15 +40,15 @@ export default function Hero() {
                 <Target size={16} />
                 <span className="ml-1 text-sm">LeetCode</span>
               </a>
-              <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="flex items-center p-2 rounded-md hover:bg-muted/30 transition">
+              <a href="https://www.linkedin.com/in/shrisairaj-gajjam" target="_blank" rel="noopener noreferrer" className="flex items-center p-2 rounded-md hover:bg-muted/30 transition">
                 <Linkedin size={16} />
                 <span className="ml-1 text-sm">LinkedIn</span>
               </a>
-              <a href="https://codingninjas.com/yourprofile" target="_blank" rel="noopener noreferrer" className="flex items-center p-2 rounded-md hover:bg-muted/30 transition">
+              <a href="https://www.codingninjas.com/studio/profile/shrisairaj" target="_blank" rel="noopener noreferrer" className="flex items-center p-2 rounded-md hover:bg-muted/30 transition">
                 <Code size={16} />
                 <span className="ml-1 text-sm">CodingNinjas</span>
               </a>
-              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center p-2 rounded-md hover:bg-muted/30 transition">
+              <a href="https://github.com/Shrisairaj" target="_blank" rel="noopener noreferrer" className="flex items-center p-2 rounded-md hover:bg-muted/30 transition">
                 <Github size={16} />
                 <span className="ml-1 text-sm">GitHub</span>
               </a>
@@ -69,7 +69,7 @@ export default function Hero() {
             {/* Photo box: place your photo at `public/images/Photo.jpg` */}
             <div className="h-64 w-full max-w-sm rounded-2xl border border-border bg-card p-1 overflow-hidden">
               <img
-                src="/images/Photo.jpg"
+                src="/images/photo.jpg"
                 alt="Shrisairaj Photo"
                 className="h-full w-full object-cover rounded-xl"
               />

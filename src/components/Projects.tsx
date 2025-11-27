@@ -82,7 +82,9 @@ export default function Projects() {
 
             <div className="mt-5 flex items-center justify-end">
               <a
-                href="#"
+                href="https://github.com/Shrisairaj"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={`View code for ${p.title}`}
                 className="inline-flex items-center rounded-md border border-border px-3 py-2 text-sm font-medium text-foreground hover:bg-muted/20"
               >
