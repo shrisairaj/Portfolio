@@ -16,7 +16,6 @@ export default function Home() {
         <Skills />
         <Achievements />
         <Certificates />
-        <Contact />
       </main>
     </div>
   );

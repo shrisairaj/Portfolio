@@ -26,11 +26,8 @@ export default function Certificates() {
             key={c.name}
             whileHover={{ y: -6 }}
             transition={{ type: "spring", stiffness: 300 }}
-            className="flex items-start gap-4 rounded-md border border-border bg-card p-4"
+            className="rounded-md border border-border bg-card p-4"
           >
-            <div className="rounded-full bg-accent/10 p-2 text-accent">
-              <CheckSquare size={20} />
-            </div>
             <div>
               <a
                 href={c.link}
