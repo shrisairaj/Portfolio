@@ -7,21 +7,20 @@ import { Briefcase, Users, Activity } from "lucide-react";
 export default function Experience() {
   const items = [
     {
-      title: "BraveSoft Advisory — Project Collaboration",
+      title: "Software Developer Intern  — BraveSoft Advisory",
       icon: <Users size={18} />,
       bullets: [
-        "Backend PHP + database tasks",
-        "Template + inventory logic",
-        "Secure authentication flows",
+        "Developed a web-based application for simplified E-commerce website creation, addressing complex UI challenges with easy-to-use forms for data management.",
+        "Implemented responsive UI, inventory management, templates, and efficient data storage with a strong backend forseamless performance.",
+        "Utilized HTML, CSS, JavaScript, PHP, MySQL, and Google Authentication to ensure secure access and scalable design.",
       ],
       },
     {
       title: "Vice President — CSESA",
       icon: <Briefcase size={18} />,
       bullets: [
-        "Organized UI/UX Design Challenge",
-        "Managed volunteers",
-        "Organized internal SIH Hackathon",
+        "Organized various Tech events fostering teamwork, creativity, and problem-solving among participants.",
+        "Coordinated with volunteers by assigning responsibilities and monitoring progress.",
       ],
     },
   ];

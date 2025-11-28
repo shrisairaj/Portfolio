@@ -7,20 +7,21 @@ import { Award } from "lucide-react";
 const ACHIEVEMENTS = [
   {
     title: "1st Place — Blind Coding C, WISOTECH 2025",
-    description: "Secured first place in the Blind Coding C competition at WISOTECH 2025, demonstrating strong problem-solving skills in C programming."
+    description: "Secured 1st Place among 70+ participants in a national-level Blind Coding competition. Demonstrated strong programming logic and memory skills by writing and debugging C code without a display interface."
   },
   {
-    title: "Participant — MSBTE Paper Presentation (AI & ML)",
-    description: "Participated in MSBTE Paper Presentation on AI & ML, showcasing knowledge in artificial intelligence and machine learning."
+    title: "190+ LeetCode Problems Solved (Ongoing)",
+    description: "Consistently practising Data Structures & Algorithms with over 190 problems solved on LeetCode. Strengthened core concepts including Sliding Window, Two Pointers, Prefix Sum, Kadane’s Algorithm, Strings, Recursion, and Backtracking. Actively improving competitive coding skills for internships and SDE roles."
   },
   {
-    title: "Vice President — Student Association",
-    description: "Served as Vice President of the Student Association, leading initiatives and fostering student engagement."
+    title: "Selected for SIH 2025 Internal Hackathon",
+    description: "Qualified in the institute-level selection round for Smart India Hackathon 2025, competing with a team to design and develop an innovative solution. Worked on the SmartCart project, integrating real-time product data using external APIs and focusing on performance, accuracy, and user experience."
   },
   {
-    title: "Organized internal SIH Hackathon",
-    description: "Organized an internal Smart India Hackathon, promoting innovation and teamwork among students."
+    title: "MSBTE Technical Paper Presentation (State Level)",
+    description: "Participated as a two-member team in the MSBTE State-Level Technical Paper Presentation Competition held at S.T.E. Society’s Sou. Venutai Chavan Polytechnic, Pune. Presented a technical paper on “Artificial Intelligence and Machine Learning”, demonstrating strong technical communication, teamwork, and the ability to explain complex concepts to a panel of judges."
   },
+  
 ];
 
 const CERTS = ["Python", "C", "C++", "CSS", "JavaScript"];

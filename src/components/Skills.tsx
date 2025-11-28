@@ -15,14 +15,16 @@ const SKILLS: Record<string, Skill[]> = {
     { name: "PHP"},
   ],
   Backend: [
-    { name: "Spring Boot"},
     { name: "Node.js"},
-    { name: "Express.js"},
+    { name: "Express.js" },
+    { name: "REST APIs" },
+    { name: "JWT Auth" },
   ],
   Frontend: [
     { name: "React.js"},
     { name: "HTML"},
-    { name: "CSS"},
+    { name: "CSS" },
+    { name: "Tailwind CSS"},
   ],
   Databases: [
     { name: "MySQL",},
@@ -30,7 +32,14 @@ const SKILLS: Record<string, Skill[]> = {
   ],
   Tools: [
     { name: "Git",},
-    { name: "GitHub"},
+    { name: "GitHub" },
+    { name: "Postman"},
+  ],
+  Core: [
+    { name: "OOP" },
+    { name: "DBMS" },
+    { name: "DSA ",},
+
   ],
 };
 
